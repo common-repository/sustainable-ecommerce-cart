@@ -1,0 +1,24 @@
+.rgbc-developed {
+	position: absolute;
+	@include calc(right, 55px);
+	@include calc(bottom, 50px);
+	display: flex;
+	align-items: flex-end;
+	&__title {
+		@include calc(font-size, 16px);
+	}
+	&__image {
+		@include calc(width, 124px);
+		@include calc(height, 24px);
+		@include calc(margin-left, 10px);
+		background-image: url(/src/assets/images/netzero-logo.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	&_dark &__title {
+		color: $font-white;
+	}
+	&_dark &__image {
+		background-image: url(/src/assets/images/netzero-logo-white.svg);
+	}
+}

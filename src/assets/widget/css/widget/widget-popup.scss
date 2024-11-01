@@ -1,0 +1,313 @@
+.rgbc-widget-popup {
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	width: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 9999;
+	background: rgba($white, 0.5);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	display: flex;
+	font-size: 16px;
+
+	@media screen and (max-width: $tablet) {
+		font-size: $base-font-tablet-size;
+	}
+	@media screen and (max-width: $mobile) {
+		font-size: $base-font-mobile-size;
+	}
+
+	&_prepare {
+		display: flex;
+	}
+	&_active {
+		opacity: 1;
+	}
+	&__popup {
+		position: relative;
+		@include calc(width, 628px);
+		@include calc(border-radius, 10px);
+		box-shadow: 0 0 0 1px rgba(11, 32, 39, 0.3);
+		background: $white;
+		color: $font-black;
+		overflow: hidden;
+		max-height: 95%;
+		overflow-y: scroll;
+
+		@media screen and (max-width: $tablet) {
+			width: auto;
+			@include calc(max-width, 350px);
+		}
+
+	}
+	&__close {
+		z-index: 1;
+		cursor: pointer;
+		position: absolute;
+		@include calc(width, 30px);
+		@include calc(height, 30px);
+		@include calc(top, 20px);
+		@include calc(right, 20px);
+
+		@media screen and (max-width: $tablet) {
+			@include calc(width, 20px);
+			@include calc(height, 20px);
+			@include calc(top, 15px);
+			@include calc(right, 11px);
+		}
+
+		svg {
+			pointer-events: none;
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title-container {
+		position: relative;
+		@include calc(padding-top, 35px);
+		@include calc(padding-bottom, 37px);
+		background-color: $font-black;
+		color: $font-white;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+
+		@media screen and (max-width: $tablet) {
+			@include calc(padding-top, 34px);
+			@include calc(padding-bottom, 39px);
+			@include calc(padding-left, 36px);
+			@include calc(padding-right, 36px);
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: url(/src/assets/images/popup-bg.svg);
+			background-repeat: no-repeat;
+			background-size: 75% auto;
+			background-position: center 25%;
+			opacity: 0.1;
+
+			@media screen and (max-width: $tablet) {
+				background-size: 85% auto;
+				background-position: center -20%;
+			}
+		}
+	}
+	&__title-icon {
+		@include calc(width, 61px);
+		@include calc(height, 58px);
+		@include calc(margin-bottom, 22px);
+
+		@media screen and (max-width: $tablet) {
+			@include calc(margin-bottom, 12px);
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	&__title {
+		font-family: $arial-bold !important;
+		@include calc(font-size, 30px, em, true);
+		text-transform: none !important;
+		line-height: 100%;
+		letter-spacing: -0.035em;
+		margin-top: 0 !important;
+		margin-bottom: 0.3em !important;
+		color: #FFF;
+
+		@media screen and (max-width: $tablet) {
+			@include calc(font-size, 23px, em, true);
+			margin-bottom: 0.26em !important;
+		}
+	}
+	&__description {
+		font-family: $arial;
+		@include calc(font-size, 15px);
+		line-height: 120%;
+	}
+	&__body {
+		@include calc(padding-top, 35px);
+		@include calc(padding-bottom, 34px);
+
+		@media screen and (max-width: $tablet) {
+			@include calc(padding-top, 24px);
+			@include calc(padding-bottom, 38px);
+		}
+	}
+	&__body-title {
+		font-family: $arial;
+		@include calc(font-size, 14px);
+		line-height: 130% !important;
+		max-width: 37.93em;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+
+		@media screen and (max-width: $tablet) {
+			padding-left: 1.14em;
+			padding-right: 1.14em;
+		}
+	}
+	&__body-title-mobile {
+		display: none;
+		@media screen and (max-width: $tablet) {
+			display: inline;
+		}
+	}
+	&__advantages {
+		@include calc(margin-top, 39px);
+		@include calc(margin-bottom, 39px);
+		@include calc(height, 128px);
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		@media screen and (max-width: $tablet) {
+			@include calc(margin-top, 35px);
+			@include calc(margin-bottom, 35px);
+			@include calc(height, 72px);
+		}
+	}
+	&__advantage {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	&__advantage-bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+	&__advantage-image {
+		width: 100%;
+		max-width: none !important;
+		height: 100% !important;
+		object-fit: cover;
+	}
+	&__advantage-title {
+		position: relative;
+		width: 100%;
+		text-align: center;
+		background: rgba(11, 32, 39, 0.5);
+		color: $font-white!important;
+		font-family: $arial !important;
+		@include calc(font-size, 14px, em, true);
+		font-weight: normal !important;
+		line-height: 130%;
+		padding-top: 1.43em;
+		padding-bottom: 1.43em;
+		margin: 0 !important;
+
+		@media screen and (max-width: $tablet) {
+			display: none;
+		}
+	}
+	&__button-container {
+		@include calc(margin-top, 32px);
+		@include calc(max-width, 402px);
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__button-title {
+		font-family: $arial-bold;
+		@include calc(font-size, 15px);
+		line-height: 130% !important;
+		text-align: center;
+		margin-bottom: 1.8em !important;
+
+		@media screen and (max-width: $tablet) {
+			@include calc(padding-left, 19px);
+			@include calc(padding-right, 19px);
+			margin-bottom: 1.67em !important;
+		}
+	}
+	&__button {
+		background: $green !important;
+		font-family: $arial-bold;
+		@include calc(font-size, 16px);
+		line-height: 93% !important;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		border-radius: 3.25em;
+		padding: 1.25em 2.5em !important;
+	}
+	&__footer {
+		@include calc(padding-top, 23px);
+		@include calc(padding-bottom, 22px);
+		background: $font-black;
+		display: flex;
+		justify-content: center;
+
+		@media screen and (max-width: $tablet) {
+			padding-top: 0;
+			background: transparent;
+			@include calc(padding-bottom, 24px);
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+	&__footer-title {
+		font-family: $arial;
+		@include calc(font-size, 15px);
+		line-height: 150%;
+		color: $font-white;
+
+		@media screen and (max-width: $tablet) {
+			@include calc(font-size, 13px);
+			color: $font-black;
+		}
+	}
+	&__footer-link {
+		color: $font-white !important;
+		text-decoration: underline !important;
+
+		@media screen and (max-width: $tablet) {
+			color: $font-black !important;
+		}
+	}
+	&__footer-logo {
+		@include calc(width, 97px);
+		@include calc(height, 18px);
+		@include calc(margin-left, 6px);
+
+		@media screen and (max-width: $tablet) {
+			margin-left: 0;
+			@include calc(margin-top, 9px);
+		}
+
+		svg {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+
+			path:not(.rgbc-path-green) {
+
+				@media screen and (max-width: $tablet) {
+					fill: $font-black;
+				}
+			}
+		}
+	}
+}

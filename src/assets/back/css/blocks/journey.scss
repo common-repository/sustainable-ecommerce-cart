@@ -1,0 +1,85 @@
+.rgbc-journey {
+	@include calc(padding-top, 10px);
+	@include calc(padding-bottom, 10px);
+
+	.rgbc-button {
+		min-width: 10.5em;
+		text-align: center;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include calc(padding-top, 18px);
+		@include calc(padding-bottom, 18px);
+		@include calc(padding-left, 63px);
+		@include calc(padding-right, 69px);
+		&:nth-child(odd) {
+			background: $light-gray;
+		}
+	}
+	&__text-container {
+		@include calc(max-width, 565px);
+	}
+	&__title {
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&__description {
+		@include calc(font-size, 16px);
+		margin-top: 0.3125em !important;
+		line-height: 150%;
+		color: rgba($font-black, 0.75);
+	}
+	&__content-container {
+		display: grid;
+		grid-template-columns: repeat(2, 9.315em);
+		@include calc(column-gap, 96px);
+	}
+	&__content-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__content-color {
+		@include calc(width, 82px);
+		@include calc(height, 82px);
+		@include calc(margin-bottom, 24px);
+		background-repeat: no-repeat;
+		background-size: contain;
+		&_green {
+			background-image: url(/src/assets/images/green-badge.svg);
+		}
+		&_black {
+			background-image: url(/src/assets/images/black-badge.svg);
+		}
+	}
+	&__content-description {
+		@include calc(font-size, 14px);
+		margin-top: 0.5em !important;
+		line-height: 150%;
+		text-align: center;
+	}
+	&__content-icon {
+		@include calc(width, 37px);
+		@include calc(height, 40px);
+	}
+	&__content-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&__content-link {
+		@include calc(font-size, 16px);
+		line-height: 150%;
+		color: $green;
+		text-decoration: underline !important;
+		&:hover, &:active, &:focus {
+			color: $green;
+		}
+	}
+}

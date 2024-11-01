@@ -1,0 +1,223 @@
+.rgbc-design {
+	@include calc(padding-top, 52px);
+	@include calc(padding-bottom, 43px);
+	display: flex;
+	justify-content: space-between;
+	&__side {
+		position: relative;
+		@include calc(padding-bottom, 90px);
+		&_left {
+			//@include calc(width, 941px);
+			width: 56.7%;
+		}
+		&_right {
+			@include calc(margin-top, 7px);
+			//@include calc(width, 619px);
+			width: 37.3%;
+			@include calc(padding-right, 55px);
+			text-align: center;
+		}
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include calc(padding-top, 40px);
+		@include calc(padding-right, 44px);
+		@include calc(padding-bottom, 40px);
+		@include calc(padding-left, 44px);
+		&_options {
+			@include calc(padding-top, 45px);
+			@include calc(padding-bottom, 45px);
+			@include calc(padding-right, 60px);
+		}
+		&_lang {
+			@include calc(max-height, 131px);
+			.rgbc-design__content-container {
+				@include calc(padding-bottom, 22px);
+			}
+			.rgbc-circle-radio__label {
+				cursor: default;
+			}
+		}
+		&:nth-child(odd) {
+			background: $light-gray;
+		}
+	}
+	&__title-container {
+		@include calc(max-width, 336px);
+
+		@media screen and (max-width: $desktop-mid) {
+			max-width: 17em;
+		}
+	}
+	&__title {
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&__languages-description {
+		@include calc(font-size, 14px);
+	}
+	&__content-container {
+		position: relative;
+		display: flex;
+	}
+	&__option {
+		cursor: pointer;
+		position: relative;
+		@include calc(width, 141px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&:not(:last-child) {
+			@include calc(margin-right, 65px);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			@include calc(top, - 20px);
+			@include calc(bottom, -20px);
+			@include calc(left, -30px);
+			@include calc(right, -30px);
+			border: 3px solid $green;
+			border-radius: 6px;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+	}
+	&__option-input {
+		width: 0;
+		height: 0;
+		position: absolute;
+		visibility: hidden;
+		&:checked {
+			& + label {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__option-image-container {
+		width: 100%;
+		@include calc(height, 154px);
+		@include calc(margin-bottom, 10px);
+	}
+	&__option-image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&__option-text-container {
+		width: 11.64em;
+		@include calc(font-size, 14px);
+		line-height: 150%;
+		text-align: center;
+	}
+	&__option-title {
+		font-size: inherit;
+		line-height: inherit;
+		font-weight: 600 !important;
+	}
+	&__option-description {
+		color: rgba($font-black, 0.75);
+		font-size: inherit;
+	}
+	&__circles {
+		display: flex;
+		justify-content: center;
+		@include calc(min-width, 410px);
+	}
+	&__circle {
+		&:not(:last-child) {
+			@include calc(margin-right, 30px);
+		}
+	}
+	&__lower-side {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: auto;
+		text-align: center;
+		&_left {
+			right: 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		&_right {
+			@include calc(right, 55px);
+
+			@media screen and (max-width: $desktop-mid) {
+				max-width: 20em;
+				margin: 0 auto;
+			}
+		}
+	}
+	&__lower-side-text {
+		@include calc(font-size, 14px);
+		line-height: 150%;
+	}
+	&__lower-side-link, a {
+		color: $font-black;
+		text-decoration: underline;
+	}
+	&__lower-side-strong, strong {
+		font-weight: 600;
+	}
+
+	&__preview-title {
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		margin-bottom: 1.4em !important;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+
+		@media screen and (max-width: $desktop-mid) {
+			font-size: 1em;
+		}
+	}
+	&__image-container {
+		position: relative;
+		width: 100%;
+		&::after {
+			content: '';
+			position: absolute;
+			@include calc(width, 64px);
+			@include calc(height, 20px);
+			@include calc(right, -55px);
+			@include calc(bottom, 116px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(/src/assets/images/design-arrow.svg);
+
+			@media screen and (max-width: $desktop-mid) {
+				bottom: 5.5em;
+			}
+		}
+
+		&_option-b {
+			&::after {
+				@include calc(bottom, 205px);
+
+				@media screen and (max-width: $desktop-mid) {
+					bottom: 10.5em;
+				}
+			}
+		}
+	}
+	&__image-wrapper {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		@include calc(border-radius, 8px);
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+
+}

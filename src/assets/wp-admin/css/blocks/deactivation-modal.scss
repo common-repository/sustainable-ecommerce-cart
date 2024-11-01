@@ -1,0 +1,38 @@
+.netzero-sm-deactivation-modal {
+  &__overlay {
+    background: radial-gradient(rgba(120,120,120,0.6), rgba(100,100,100,0.8) 20%, #464646);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+
+  &__modal {
+   width: 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 3px 3px 2px 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+
+    input {
+      margin: 0;
+    }
+
+    label {
+      margin-left: 5px;
+    }
+
+    [data-netzero-sm-submit-deactivate] {
+      margin-left: 10px;
+    }
+  }
+
+  &__buttons_group {
+    margin-top: 20px;
+  }
+}

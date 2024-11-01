@@ -1,0 +1,30 @@
+.rgbc-install-list-item {
+	display: flex;
+	@include calc(margin-bottom, 30px);
+	&__icon {
+		flex: 0 0 auto;
+		@include calc(width, 36px);
+		@include calc(height, 42px);
+		@include calc(margin-right, 23px);
+	}
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&__text-container {
+		@include calc(max-width, 367px);
+	}
+	&__title {
+		font-family: $gilroy;
+		@include calc(font-size, 25px);
+		margin-bottom: 0.12em !important;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: $green;
+	}
+	&__description {
+		@include calc(font-size, 16px);
+		line-height: 150%;
+	}
+}

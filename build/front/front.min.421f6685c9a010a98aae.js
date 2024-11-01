@@ -1,0 +1,1 @@
+(()=>{"use strict";var t;t=function(){},"loading"===document.readyState&&document.addEventListener("DOMContentLoaded",t)})();

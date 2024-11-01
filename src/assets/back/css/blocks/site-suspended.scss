@@ -1,0 +1,48 @@
+.rgbc-site-suspended {
+  color: $font-white;
+  text-align: center;
+  &__wrapper {
+    @include calc(max-width, 600px);
+  }
+  &__title {
+    font-family: $gilroy;
+    color: $green;
+    @include calc(font-size, 30px);
+    line-height: 1.2em;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+  &__description {
+    @include calc(margin-top, 32px);
+    @include calc(margin-bottom, 27px);
+  }
+  &__paragraph {
+    font-family: $roboto;
+    @include calc(font-size, 18px);
+    line-height: 1.5em;
+  }
+  &__thanks {
+    @include calc(padding-bottom, 27.5px);
+    border-bottom: 1px solid rgba($font-white, 0.5);
+  }
+  &__contacts {
+    @include calc(margin-top, 35.5px);
+  }
+  &__item-title {
+    font-family: $gilroy;
+    @include calc(font-size, 14px);
+    line-height: 1.2em;
+    letter-spacing: -0.03em;
+    color: rgba($font-white, 0.75);
+    margin-right: 0.72em;
+  }
+  &__email {
+    @include calc(margin-bottom, 10px);
+  }
+  &__email-link {
+    color: $orange;
+  }
+  &__phone-link {
+    color: $font-white;
+  }
+}

@@ -1,0 +1,121 @@
+body.rtl {
+  .rgbc-widget {
+    &__price-container {
+      padding-left: 13%;
+      padding-right: initial;
+
+      @media screen and (max-width: $mobile) {
+        padding-left: 19%;
+      }
+
+      @container (min-width: 601px) {
+        text-align: left;
+        padding-left: 2.8em;
+      }
+    }
+    &:not(&_small) &__price-container {
+      @supports not (container-type: inline-size) {
+        text-align: left;
+        padding-left: 2.8em;
+      }
+    }
+    &_mini &__price-container {
+      padding-left: 2.8em;
+    }
+
+    &__icon {
+      margin-right: auto;
+      @include calc(margin-left, 27px);
+
+      @container (max-width: 600px) {
+        @include calc(margin-left, 25px);
+      }
+    }
+
+    &_small &__icon {
+      @supports not (container-type: inline-size) {
+        @include calc(margin-left, 25px);
+      }
+    }
+
+    &__description-icon {
+      left: -1.8em;
+      right: auto;
+
+      @container (max-width: 600px) {
+        left: -0.6em;
+        right: auto;
+      }
+    }
+
+    &_small &__description-icon {
+      @supports not (container-type: inline-size) {
+        left: -0.6em;
+        right: auto;
+      }
+    }
+    &_mini &__description-icon {
+      left: -1.7em;
+      right: auto;
+    }
+
+    &__description {
+      left: -6.5em;
+      right: -6em;
+      @include calc(padding-right, 26px);
+      @include calc(padding-left, 58px);
+      filter: drop-shadow(0px 7px 15px rgba(101, 101, 101, 0.15));
+
+    @container (max-width: 600px) {
+      right: -7em;
+    }
+    @container (max-width: 300px) {
+      right: -6.5em;
+      left: -2.1em;
+    }
+    @container (max-width: 250px) {
+      right: -5em;
+      left: -1.7em;
+    }
+
+      &::before {
+        @include calc(left, 26px);
+        right: auto;
+      }
+    }
+    &_small &__description {
+      @supports not (container-type: inline-size) {
+        right: -7em;
+      }
+    }
+    &_mini &__description {
+      right: -5em;
+      left: -1.7em;
+    }
+    &_small-300 &__description {
+      @supports not (container-type: inline-size) {
+        right: -6.5em;
+        left: -2.1em;
+      }
+    }
+    &_small-250 &__description {
+      @supports not (container-type: inline-size) {
+        right: -5em;
+        left: -1.7em;
+      }
+    }
+
+    &__description-link {
+      right: 2em;
+    }
+
+    &__logo {
+      @include calc(margin-right, 4px);
+      margin-left: initial;
+    }
+
+    &_mini &__logo {
+      margin-right: 0.4em;
+    }
+  }
+}

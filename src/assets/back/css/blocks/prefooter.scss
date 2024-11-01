@@ -1,0 +1,64 @@
+.rgbc-prefooter {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	@include calc(height, 78px);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__units {
+		display: flex;
+		align-items: baseline;
+	}
+	&__units-checkbox-container {
+		display: flex;
+		align-items: center;
+	}
+	&__units-title {
+		@include calc(font-size, 18px);
+		margin-right: 1.12em;
+	}
+	&__unit-checkbox {
+		@include calc(margin-left, 10px);
+		@include calc(margin-right, 10px);
+
+		.rgbc-checkbox__line {
+			background: #09CC62 !important;
+		}
+	}
+	&__unit {
+		color: rgba($font-black, 0.75);
+	}
+
+	&__state-list {
+		display: flex;
+	}
+	&__state-item {
+		color: rgba($font-black, 0.75);
+		@include calc(font-size, 14px);
+		margin-bottom: 0;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-right: 1.43em;
+		}
+		&::before {
+			content: '';
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			margin-right: 0.43em;
+		}
+		&_green {
+			&::before {
+				background: $green;
+			}
+		}
+		&_red {
+			&::before {
+				background: $pink;
+			}
+		}
+	}
+}

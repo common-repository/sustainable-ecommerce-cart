@@ -1,0 +1,22 @@
+.rgbc-temp-widget-container {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__block {
+		display: grid;
+		grid-template-columns: 1fr;
+		row-gap: 2em;
+		@include calc(width, 480px);
+		container-type: inline-size;
+
+		@media screen and (max-width: $tablet-p) {
+			width: 480px;
+		}
+
+		@media screen and (max-width: $widget-bp) {
+			width: 100%;
+		}
+	}
+}

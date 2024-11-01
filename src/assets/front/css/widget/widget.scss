@@ -1,0 +1,521 @@
+.rgbc-widget-container {
+	position: relative;
+	z-index: 1;
+	font-size: 20px;
+	display: block!important;
+}
+
+.rgbc-widget-wrapper {
+	container-type: inline-size;
+}
+
+.rgbc-widget {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.8vw;
+	width: inherit;
+	margin: 10px 0;
+	@include calc(padding-top, 35px);
+	@include calc(padding-bottom, 30px);
+	@include calc(padding-left, 33px);
+	@include calc(padding-right, 38px);
+	@include calc(border-radius, 10px);
+	border: 1px solid rgba(11, 32, 39, 0.3);
+	background: $white;
+
+	@media screen and (min-width: $desktop-full + 1) {
+		font-size: 15.36px;
+	}
+
+	@media screen and (max-width: $tablet-p) {
+		font-size: 1.3vw;
+	}
+
+	@media screen and (max-width: $widget-bp) {
+		font-size: 12px;
+	}
+
+	@media screen and (max-width: $mobile) {
+		font-size: 2.8vw !important;
+	}
+
+	@container (max-width: 600px) {
+		@include calc(padding-top, 25px);
+		@include calc(padding-bottom, 23px);
+		@include calc(padding-left, 31px);
+		@include calc(padding-right, 18px);
+		font-size: 0.7em;
+	}
+	@container (max-width: 400px) {
+		font-size: 0.6em;
+	}
+	@container (max-width: 350px) {
+		font-size: 0.47em;
+	}
+	@container (max-width: 300px) {
+		font-size: 0.4em;
+	}
+	@container (max-width: 250px) {
+		font-size: 0.31em;
+	}
+
+	&_small {
+		@supports not (container-type: inline-size) {
+			@include calc(padding-top, 25px);
+			@include calc(padding-bottom, 23px);
+			@include calc(padding-left, 31px);
+			@include calc(padding-right, 18px);
+		}
+	}
+	&_mini {
+		font-size: 0.31em;
+		display: grid;
+		grid-template-columns: 6.1em 1fr;
+		column-gap: 2.5em;
+		padding: 2.5em 2em 1.7em 3.3em;
+	}
+	&_small-600 {
+		@supports not (container-type: inline-size) {
+			font-size: 0.7em;
+		}
+	}
+	&_small-400 {
+		@supports not (container-type: inline-size) {
+			font-size: 0.6em;
+		}
+	}
+	&_small-350 {
+		@supports not (container-type: inlinse-size) {
+			font-size: 0.47em;
+		}
+	}
+	&_small-300 {
+		@supports not (container-type: inline-size) {
+			font-size: 0.4em;
+		}
+	}
+	&_small-250 {
+		@supports not (container-type: inline-size) {
+			font-size: 0.31em;
+		}
+	}
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+	}
+	&_mini &__left-side,
+	&_mini &__right-side {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	&__left-side {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	&_mini &__left-side {
+		max-width: 93%;
+	}
+
+	&__description-container {
+		&:hover {
+			.rgbc-widget__description {
+				opacity: 1;
+				z-index: 1;
+				visibility: visible;
+				transition: opacity 0.3s;
+			}
+		}
+	}
+	&__description-icon {
+		position: absolute;
+		cursor: pointer;
+		@include calc(width, 20px);
+		@include calc(height, 20px);
+		top: -0.6em;
+		right: -1.8em;
+
+		@container (max-width: 600px) {
+			right: -0.6em;
+		}
+	}
+	&_small &__description-icon {
+		@supports not (container-type: inline-size) {
+			right: -0.6em;
+		}
+	}
+	&_mini &__description-icon {
+		width: 12px;
+		height: 12px;
+		top: -0.9em;
+		right: -1.7em;
+	}
+
+	&__description {
+		font-size: 15px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: -6.5em;
+		left: -6em;
+		background: $white;
+		@include calc(border-radius, 12px);
+		@include calc(min-height, 136px);
+		@include calc(padding-top, 26px);
+		@include calc(padding-left, 26px);
+		@include calc(padding-right, 58px);
+		@include calc(padding-bottom, 56px);
+		filter: drop-shadow(0px 7px 15px rgba(101, 101, 101, 0.15));
+		opacity: 0;
+		z-index: -1;
+		visibility: hidden;
+
+		@container (max-width: 600px) {
+			left: -7em;
+		}
+		@container (max-width: 300px) {
+			left: -6.5em;
+			right: -2.1em;
+		}
+		@container (max-width: 250px) {
+			left: -5em;
+			right: -1.7em;
+		}
+
+		&::before {
+			content: '';
+			@include calc(width, 42px);
+			@include calc(height, 40px);
+			position: absolute;
+			@include calc(right, 26px);
+			@include calc(bottom, 26px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(/src/assets/images/widget-tree.svg);
+		}
+	}
+	&_small &__description {
+		@supports not (container-type: inline-size) {
+			left: -7em;
+		}
+	}
+	&_mini &__description {
+		top: calc(50% + 1.3em);
+		left: -5em;
+		right: -1.7em;
+	}
+	&_small-300 &__description {
+		@supports not (container-type: inline-size) {
+			left: -6.5em;
+			right: -2.1em;
+		}
+	}
+	&_small-250 &__description {
+		@supports not (container-type: inline-size) {
+			left: -5em;
+			right: -1.7em;
+		}
+	}
+
+	&__description-paragraph {
+		font-family: $arial;
+		@include calc(font-size, 13px);
+		line-height: 140%;
+		color: rgba($font-black, 0.65);
+	}
+	&__description-link {
+		font-family: $arial-bold;
+		@include calc(font-size, 13px);
+		line-height: 140% !important;
+		background: transparent !important;
+		color: $green !important;
+		text-decoration: underline;
+		text-transform: none;
+		position: absolute;
+		left: 2em;
+		bottom: 2em;
+		&:hover, &:active, &:focus {
+			color: $green;
+		}
+	}
+	&__icon {
+		flex: 0 0 auto;
+		@include calc(width, 61px);
+		@include calc(height, 58px);
+		@include calc(margin-right, 27px);
+
+		@container (max-width: 600px) {
+			@include calc(margin-right, 25px);
+		}
+	}
+	&_mini &__icon {
+		width: 6.1em;
+		height: 5.8em;
+		position: relative;
+		top: 2em;
+	}
+
+	&_small &__icon {
+
+		@supports not (container-type: inline-size) {
+			@include calc(margin-right, 25px);
+		}
+	}
+
+	&__title-container {
+
+		@container (max-width: 600px) {
+			@include calc(max-width, 167px);
+		}
+	}
+	&_small &__title-container {
+		@supports not (container-type: inline-size) {
+			@include calc(max-width, 167px);
+		}
+	}
+	&_mini &__title-container {
+		max-width: none;
+	}
+
+	&__title {
+		font-family: $arial !important;
+		@include calc(font-size, 25px, em, true);
+		font-weight: normal !important;
+		line-height: 120%;
+		margin: 0 !important;
+
+		@container (max-width: 600px) {
+			@include calc(font-size, 20px, em, true);
+		}
+
+		&:before {
+			display: none!important;
+		}
+	}
+	&_small &__title {
+		@supports not (container-type: inline-size) {
+			@include calc(font-size, 20px, em, true);
+		}
+	}
+	&_mini &__title {
+		font-size: 2em !important;
+	}
+
+	&__logo-container {
+		display: flex;
+		align-items: baseline;
+		@include calc(margin-top, 3px);
+	}
+
+	&_small &__logo-container {
+		@supports not (container-type: inline-size) {
+			@include calc(margin-top, 8px);
+		}
+	}
+	&_mini &__logo-container {
+		margin-top: 0.8em;
+	}
+
+	&__logo-title {
+		font-family: $arial;
+		@include calc(font-size, 18px);
+		line-height: 150%;
+		color: rgba($black, 0.5);
+
+		@container (max-width: 600px) {
+			@include calc(font-size, 14px);
+		}
+	}
+	&_small &__logo-title {
+		@supports not (container-type: inline-size) {
+			@include calc(font-size, 14px);
+		}
+	}
+	&_mini &__logo-title {
+		font-size: 1.4em;
+	}
+
+	&__logo {
+		display: flex;
+		@include calc(margin-left, 4px);
+		@include calc(width, 96px);
+		@include calc(height, 18px);
+
+		@container (max-width: 600px) {
+			@include calc(width, 75px);
+			@include calc(height, 14px);
+		}
+	}
+	&_small &__logo {
+		@supports not (container-type: inline-size) {
+			@include calc(width, 75px);
+			@include calc(height, 14px);
+		}
+	}
+	&_mini &__logo {
+		width: 7.5em;
+		height: 1.4em;
+		margin-left: 0.4em;
+	}
+
+	&__right-side {
+		display: flex;
+		flex: auto;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&_mini &__right-side {
+		justify-content: flex-start;
+		margin-top: 1.1em;
+	}
+
+	&__price-container {
+		padding-right: 13%;
+
+		@media screen and (max-width: $mobile) {
+			padding-right: 19%;
+		}
+
+		@container (min-width: 601px) {
+			flex: auto;
+			text-align: right;
+			padding-right: 2.8em;
+		}
+	}
+	&:not(&_small) &__price-container {
+		@supports not (container-type: inline-size) {
+			flex: auto;
+			text-align: right;
+			padding-right: 2.8em;
+		}
+	}
+	&_mini &__price-container {
+		flex: 0 0 auto !important;
+		padding-right: 2.8em;
+	}
+
+	&__price {
+		font-family: $arial-bold;
+		@include calc(font-size, 25px);
+		line-height: 150%;
+	}
+	&_mini &__price {
+		font-size: 2.5em;
+	}
+
+
+	&_dark {
+		background: $font-black;
+		color: $font-white;
+
+		.woocommerce-Price-amount {
+			color: $font-white;
+		}
+	}
+	&_dark &__title {
+		color: $font-white !important;
+	}
+	&_dark &__logo-title {
+		color: rgba($font-white, 0.75);
+	}
+	&_dark &__logo {
+		svg {
+			path:not(.rgbc-path-green) {
+				fill: $font-white;
+			}
+		}
+	}
+	&_dark &__description-icon {
+		svg {
+			path {
+				fill: $font-white;
+			}
+		}
+	}
+	&_dark &__popup {
+		background: rgba($font-black, 0.5);
+	}
+
+	&_green {
+		background: $dark-green;
+		color: $font-white;
+
+		.woocommerce-Price-amount {
+			color: $font-white;
+		}
+	}
+	&_green &__title {
+		color: $font-white !important;
+	}
+	&_green &__icon {
+		svg {
+			path {
+				stroke: $font-white;
+			}
+		}
+	}
+	&_green &__logo-title {
+		color: rgba($font-white, 0.75);
+	}
+	&_green &__logo {
+		svg {
+			path:not(.rgbc-path-green) {
+				fill: $font-white;
+			}
+		}
+	}
+	&_green &__description-icon {
+		svg {
+			path {
+				fill: $font-white;
+			}
+		}
+	}
+	&_green &__popup {
+		background: rgba($dark-green, 0.5);
+	}
+
+	&_gray {
+		background: $widget-gray;
+		color: $font-white;
+
+		.woocommerce-Price-amount {
+			color: $font-white;
+		}
+	}
+	&_gray &__title {
+		color: $font-white !important;
+	}
+	&_gray &__icon {
+		svg {
+			path {
+				stroke: $font-white;
+			}
+		}
+	}
+	&_gray &__logo-title {
+		color: rgba($font-white, 0.75);
+	}
+	&_gray &__logo {
+		svg {
+			path:not(.rgbc-path-green) {
+				fill: $font-white;
+			}
+		}
+	}
+	&_gray &__description-icon {
+		svg {
+			path {
+				fill: $font-white;
+			}
+		}
+	}
+	&_gray &__popup {
+		background: rgba($widget-gray, 0.5);
+	}
+}

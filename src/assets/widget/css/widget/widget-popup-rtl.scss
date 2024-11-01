@@ -1,0 +1,11 @@
+.rgbc-widget-popup.rtl {
+  direction: rtl;
+
+  .rgbc-widget-popup {
+    &__body-title {
+      right: 50%;
+      transform: translateX(50%);
+      text-align: center;
+    }
+  }
+}

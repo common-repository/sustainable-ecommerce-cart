@@ -1,0 +1,42 @@
+.rgbc-checkbox {
+	position: relative;
+	@include calc(width, 34px);
+	@include calc(height, 20px);
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&__input {
+		position: absolute;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+		&:checked {
+			& + .rgbc-checkbox__line {
+				background: $green;
+				&::before {
+					left: calc(100% - 1.25em);
+				}
+			}
+		}
+	}
+	&__line {
+		width: 100%;
+		@include calc(height, 14px);
+		@include calc(border-radius, 7px);
+		background: rgba($font-black, 0.3);
+		transition: background 0.3s;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			@include calc(height, 20px);
+			@include calc(width, 20px);
+			border-radius: 50%;
+			background: $font-black;
+			transition: left 0.3s;
+		}
+	}
+
+}

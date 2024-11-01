@@ -1,0 +1,27 @@
+.rgbc-error-message {
+	display: inline-block;
+	padding: 0.6em 2.3em 0.6em 3.1em;
+	border-radius: 0.4em;
+	border: 1px solid $error;
+	color: $error;
+	@include calc(font-size, 13px);
+	line-height: 150%;
+
+	@media screen and (max-width: $desktop-mid) {
+		font-size: 0.7em;
+	}
+
+	&::before {
+		content: '';
+		width: 1.2em;
+		height: 1.2em;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0.78em;
+		margin: auto 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url(/src/assets/images/attention.svg);
+	}
+}

@@ -1,0 +1,68 @@
+.rgbc-install-button {
+	position: relative;
+	@include calc(height, 55px);
+	@include calc(border-radius, 52px);
+	@include calc(padding-top, 20px, em, true);
+	@include calc(padding-right, 40px, em, true);
+	@include calc(padding-bottom, 20px, em, true);
+	@include calc(padding-left, 40px, em, true);
+	background: $orange !important;
+	color: $font-black;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $gilroy-semi;
+	@include calc(font-size, 16px);
+	line-height: 93% !important;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+	&_terms-alert &__terms-alert {
+		z-index: 1;
+		opacity: 1;
+	}
+
+	&__terms-alert {
+		position: absolute;
+		left: -100%;
+		right: -100%;
+		bottom: calc(100% + 0.63em);
+		@include calc(max-width, 285px);
+		@include calc(padding-top, 17px);
+		@include calc(padding-bottom, 17px);
+		@include calc(padding-left, 29px);
+		@include calc(padding-right, 29px);
+		@include calc(border-radius, 12px);
+		text-transform: none;
+		margin: 0 auto;
+		background: $font-white;
+		z-index: -1;
+		opacity: 0;
+		transition: opacity 0.3s;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			@include calc(bottom, -5px);
+			@include calc(width, 10px);
+			@include calc(height, 10px);
+			transform: rotate(45deg);
+			background: $font-white;
+		}
+	}
+
+	&__terms-alert-message {
+		font-family: $gilroy;
+		@include calc(font-size, 13px);
+		line-height: 1.5em;
+		letter-spacing: normal;
+		color: $font-black;
+	}
+
+	&_resend_email {
+		height: auto;
+		@include calc(font-size, 14px);
+	}
+}

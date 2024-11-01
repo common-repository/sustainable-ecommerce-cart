@@ -1,0 +1,15 @@
+netzero-widget-popup {
+  position: relative;
+  z-index: 999999;
+  display: none;
+  transition: opacity .3s;
+  opacity: 0;
+
+  &.rgbc-widget-popup_prepare {
+    display: flex;
+  }
+
+  &.rgbc-widget-popup_active {
+    opacity: 1;
+  }
+}

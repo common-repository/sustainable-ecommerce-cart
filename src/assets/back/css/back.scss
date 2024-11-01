@@ -1,0 +1,23 @@
+@import '../../common/css/fonts';
+@import '../../common/css/vars';
+@import '../../common/css/mixins';
+@import '../../common/css/base';
+
+@import 'install/main-install';
+
+@import 'components/title-section';
+@import 'components/checkbox';
+@import 'components/error-message';
+@import 'components/button';
+@import 'components/circle-radio';
+
+@import 'blocks/header';
+@import 'blocks/prefooter';
+@import 'blocks/footer';
+@import 'blocks/dashboard';
+@import 'blocks/settings';
+@import 'blocks/design';
+@import 'blocks/account';
+@import 'blocks/journey';
+@import 'blocks/start';
+@import 'blocks/site-suspended';

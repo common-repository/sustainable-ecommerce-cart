@@ -1,0 +1,166 @@
+.rgbc-install-layout {
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	min-height: calc(100vh - 32px);
+	background: $font-black;
+	&__side {
+		width: 100%;
+		height: 100%;
+	}
+	&__title {
+		font-family: $gilroy-semi;
+		@include calc(font-size, 45px);
+		line-height: 100%;
+		letter-spacing: -0.03em;
+		color: $green;
+	}
+	&__subtitle {
+		font-family: $gilroy;
+		@include calc(font-size, 30px, em, true);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		margin-top: 0.5em !important;
+		margin-bottom: 0 !important;
+		color: $font-white;
+		span {
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: -0.2em;
+				right: 0;
+				height: 0.8125em;
+				background-image: url(/src/assets/images/underline.svg);
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+	}
+	&__description {
+		@include calc(font-size, 18px);
+		margin-top: 1.9em;
+		max-width: 23.06em;
+		line-height: 150%;
+		& * {
+			&:not(:last-child) {
+				margin-bottom: 1.5em;
+			}
+		}
+		p {
+			font-size: 1em;
+		}
+	}
+	&__list-container {
+		@include calc(margin-top, 27px);
+	}
+	&__list-title {
+		@include calc(font-size, 18px);
+		line-height: 150%;
+		color: $font-white;
+	}
+	&__list {
+		@include calc(margin-top, 26px, em, true);
+	}
+	&__list-item {
+		@include calc(font-size, 16px);
+		line-height: 150%;
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			@include calc(margin-bottom, 15px);
+		}
+		&::before {
+			content: '';
+			width: 1.25em;
+			height: 1.25em;
+			margin-right: 0.5625em;
+			background-image: url(/src/assets/images/list-item.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+	&__logo {
+		@include calc(width, 98px);
+		@include calc(height, 91px);
+		@include calc(margin-bottom, 27px);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-image: url(/src/assets/images/install-icon.svg);
+	}
+	&__install-list {
+		@include calc(margin-top, 59px);
+	}
+	&_install-1 &__side {
+		@include calc(padding-top, 248px);
+	}
+	&_install-1 &__side_left {
+		@include calc(padding-left, 206px);
+		@include calc(padding-right, 185px);
+		color: $font-white;
+		@media screen and (max-width: $desktop-mid - 1) {
+			padding-left: 8em;
+			padding-right: 8em;
+		}
+	}
+	&_install-1 &__side_right {
+		@include calc(padding-left, 84px);
+		@include calc(padding-right, 94px);
+		@include calc(padding-bottom, 253px);
+		background: $bg-white;
+	}
+	&_install-1 &__button {
+		@include calc(margin-top, 73px);
+		@include calc(margin-right, -10px);
+		text-align: center;
+	}
+
+	&_install-2 {
+		@include calc(padding-top, 145px);
+		color: $font-white;
+	}
+	&_install-2 &__side_left {
+		position: relative;
+		//@include calc(width, 916px);
+		width: 47.7vw;
+		@include calc(padding-top, 13px);
+		@include calc(padding-left, 206px);
+		@include calc(padding-right, 122px);
+
+		@media screen and (max-width: $desktop-mid - 1) {
+			padding-left: 9.3em;
+		}
+
+		&::after {
+			content: '';
+			width: 1px;
+			background: $font-white;
+			position: absolute;
+			top: 0;
+			right: 0;
+			@include calc(height, 722px);
+
+			@media screen and (max-width: $desktop-mid - 1) {
+				height: 51em;
+			}
+		}
+	}
+	&_install-2 &__subtitle {
+		span {
+			&::before {
+				top: 90%;
+				background-image: url(/src/assets/images/underline-2.svg);
+			}
+		}
+	}
+	&_install-2 &__side_right {
+		@include calc(padding-top, 153px);
+		@include calc(padding-left, 177px);
+		@include calc(padding-bottom, 279px);
+
+		@media screen and (max-width: $desktop-mid - 1) {
+			padding-left: 9em;
+		}
+	}
+}

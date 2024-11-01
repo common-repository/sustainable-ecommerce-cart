@@ -1,0 +1,898 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Netzero SM 0.0.1\n"
+"POT-Creation-Date: 2023-01-17 09:35+0300\n"
+"PO-Revision-Date: 2023-01-17 09:36+0300\n"
+"Last-Translator: \n"
+"Language-Team: rgbcode\n"
+"Language: pt_AO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: build\n"
+
+#: src/classes/class-common.php:11
+msgid "Woocommerce is required for Netzero SM plugin to work correctly."
+msgstr ""
+
+#: src/classes/class-helper.php:192
+msgid "Invalid first name"
+msgstr ""
+
+#: src/classes/class-helper.php:194
+msgid "Invalid last name"
+msgstr ""
+
+#: src/classes/class-helper.php:196
+msgid "Invalid email"
+msgstr ""
+
+#: src/classes/class-helper.php:198
+msgid "Connection to the server error. Please try again later"
+msgstr ""
+
+#: src/classes/class-helper.php:200
+msgid "Something went wrong. Please contact service administrator"
+msgstr ""
+
+#: src/classes/class-helper.php:202
+msgid "Invalid email secret key"
+msgstr ""
+
+#: src/classes/class-helper.php:204
+msgid "Accept Terms of Service is required"
+msgstr ""
+
+#: src/classes/class-helper.php:206
+msgid "Successfully updated"
+msgstr ""
+
+#: src/classes/class-plugin-control.php:14
+msgid "Plugin not activated: multisite is not supported"
+msgstr ""
+
+#: src/classes/class-plugin-details.php:32
+msgid "Version"
+msgstr ""
+
+#: src/classes/class-plugin-details.php:35
+msgid "By"
+msgstr ""
+
+#: src/classes/class-plugin-details.php:45
+msgid "More information about"
+msgstr ""
+
+#: src/classes/class-plugin-details.php:46
+msgid "Details"
+msgstr ""
+
+#: src/classes/class-rest-routes.php:99
+msgid "Invalid secret key"
+msgstr ""
+
+#: src/classes/class-rest-routes.php:108
+msgid "Verification error"
+msgstr ""
+
+#: src/classes/class-rest-routes.php:137
+msgid "Invalid site secret key"
+msgstr ""
+
+#: src/classes/class-router.php:41
+msgid "Security token expired. Please try again"
+msgstr ""
+
+#: src/classes/class-save-trees.php:110
+#: src/classes/class-wc-product-save-trees.php:23
+msgid "Sustainability - Certified Carbon Offset"
+msgstr "Sustentabilidade - Compensação de carbono"
+
+#: src/classes/class-settings.php:38
+msgid "Sustainable eCommerce Cart"
+msgstr ""
+
+#: src/templates/account.php:29
+msgid "Financial Overview & Billing Information"
+msgstr ""
+
+#: src/templates/account.php:30
+msgid ""
+"Here you can see the amount of money your customers paid for carbon offset "
+"contribution. At the end of each month, we send you an invoice for the same "
+"amount of carbon offset contribution you collected during the last month."
+msgstr ""
+
+#: src/templates/account.php:32
+msgid "Your customers have paid"
+msgstr ""
+
+#: src/templates/account.php:36
+msgid "This month"
+msgstr ""
+
+#: src/templates/account.php:40
+msgid "Last month"
+msgstr ""
+
+#: src/templates/account.php:44
+msgid "This year"
+msgstr ""
+
+#: src/templates/account.php:47
+msgid "for carbon offset contributions."
+msgstr ""
+
+#: src/templates/account.php:50
+msgid ""
+"** These figures represent a reasonable estimation of the carbon offset "
+"contributions. Small differences can accrue due to servers delays and multi-"
+"currency calculation. The final amount(s) will be presented on your monthly "
+"invoice."
+msgstr ""
+
+#: src/templates/account.php:55
+msgid "Choose your favorite payment method"
+msgstr ""
+
+#: src/templates/account.php:56
+msgid ""
+"Complete your payment by the 10th of each month for the entire balance of "
+"the previous month. Check your invoice for detailed instructions. We accept "
+"the following payment methods:"
+msgstr ""
+
+#: src/templates/account.php:61
+msgid "PayPal"
+msgstr ""
+
+#: src/templates/account.php:66
+msgid "Bank transfer"
+msgstr ""
+
+#: src/templates/account.php:68
+msgid "Name:"
+msgstr ""
+
+#: src/templates/account.php:69
+msgid "Iban:"
+msgstr ""
+
+#: src/templates/account.php:74
+msgid "Credit card"
+msgstr ""
+
+#: src/templates/account.php:75
+msgid "Click here"
+msgstr ""
+
+#: src/templates/account.php:79
+msgid "For your reciept, please send us payment confirmation to:"
+msgstr ""
+
+#: src/templates/design.php:17 src/templates/header.php:19
+#: src/templates/start.php:34
+msgid "Design"
+msgstr ""
+
+#: src/templates/design.php:25
+msgid "1. Choose where to place the widget on the cart page"
+msgstr ""
+
+#: src/templates/design.php:30 src/templates/design.php:38
+msgid "option"
+msgstr ""
+
+#: src/templates/design.php:32
+msgid "Option A (Recommended)"
+msgstr ""
+
+#: src/templates/design.php:33
+msgid "Below the cart total"
+msgstr ""
+
+#: src/templates/design.php:40
+msgid "Option B"
+msgstr ""
+
+#: src/templates/design.php:41
+msgid "Below the cart"
+msgstr ""
+
+#: src/templates/design.php:48
+msgid "2. Choose color"
+msgstr ""
+
+#: src/templates/design.php:116
+msgid "US"
+msgstr ""
+
+#: src/templates/design.php:121
+msgid "UK"
+msgstr ""
+
+#: src/templates/design.php:126
+msgid "IT"
+msgstr ""
+
+#: src/templates/design.php:131
+msgid "DE"
+msgstr ""
+
+#: src/templates/design.php:136
+msgid "FR"
+msgstr ""
+
+#: src/templates/design.php:141
+msgid "PT"
+msgstr ""
+
+#: src/templates/design.php:146
+msgid "ES"
+msgstr ""
+
+#: src/templates/design.php:153
+msgid "3. The language will be detected automatically"
+msgstr ""
+
+#: src/templates/design.php:154
+msgid "These languages are available"
+msgstr ""
+
+#: src/templates/design.php:184
+msgid "Can’t find a style you like?"
+msgstr ""
+
+#: src/templates/design.php:186
+msgid "Contact us"
+msgstr ""
+
+#: src/templates/design.php:187
+msgid "for customization."
+msgstr ""
+
+#: src/templates/design.php:190 src/templates/settings.php:157
+msgid "Save Changes"
+msgstr ""
+
+#: src/templates/design.php:194
+msgid "Preview of the widget on a default WooCommerce Cart"
+msgstr ""
+
+#: src/templates/design.php:204
+msgid "Important!"
+msgstr ""
+
+#: src/templates/design.php:205
+msgid "besides adding the widget, nothing else will change on your cart."
+msgstr ""
+
+#: src/templates/footer.php:7
+msgid "Need Help?"
+msgstr ""
+
+#: src/templates/footer.php:8
+msgid "Check out the"
+msgstr ""
+
+#: src/templates/footer.php:10
+msgid "FAQ"
+msgstr ""
+
+#: src/templates/footer.php:11
+msgid "or contact our support team on:"
+msgstr ""
+
+#: src/templates/footer.php:14 src/templates/site-suspended.php:35
+msgid "EMAIL"
+msgstr ""
+
+#: src/templates/footer.php:22 src/templates/site-suspended.php:43
+msgid "Whatsapp or Call"
+msgstr ""
+
+#: src/templates/front/save-trees.php:36
+msgid "Make This Order More Sustainable!"
+msgstr "Torne este pedido mais sustentável"
+
+#: src/templates/front/save-trees.php:37
+msgid "Powered by"
+msgstr "Desenvolvido por"
+
+#: src/templates/front/save-trees.php:64
+msgid ""
+"By contributing, you reduce the carbon footprint of this order caused by "
+"shipping and manufacturing. Support the highest standard of carbon offset "
+"projects in the fight against climate change."
+msgstr ""
+"Ao contribuir, você reduz a pegada de carbono deste pedido causada pelo "
+"envio e fabricação. Apoie o mais alto padrão de projetos de compensação de "
+"carbono na luta contra as mudanças climáticas."
+
+#: src/templates/front/save-trees.php:65
+msgid "Learn More"
+msgstr "Saiba mais"
+
+#: src/templates/front/save-trees.php:107
+msgid "You can make a difference!"
+msgstr "Você pode fazer a diferença!"
+
+#: src/templates/front/save-trees.php:108
+msgid "Every purchase has a climate impact due to production & shipping."
+msgstr "Cada compra tem um impacto climático devido à produção e envio."
+
+#: src/templates/front/save-trees.php:111
+msgid ""
+"You can significantly reduce the carbon footprint of this order by adding a "
+"certified carbon offset to your cart. Together we can:"
+msgstr ""
+"Você pode reduzir significativamente a pegada de carbono deste pedido "
+"adicionando uma compensação de carbono certificada ao seu carrinho. Juntos, "
+"nós podemos:"
+
+#: src/templates/front/save-trees.php:115
+msgid "Protect existing forests"
+msgstr "Proteja as florestas existentes"
+
+#: src/templates/front/save-trees.php:119 src/templates/welcome.php:33
+msgid "Plant new forests"
+msgstr "Plante novas florestas"
+
+#: src/templates/front/save-trees.php:123
+msgid "Promote clean energy"
+msgstr "Promova a energia limpa"
+
+#: src/templates/front/save-trees.php:127
+msgid "Join thousands of climate-conscious shoppers acting for a better future"
+msgstr ""
+"Junte-se a milhares de compradores preocupados com o clima, que tomam "
+"iniciativas para um futuro melhor"
+
+#: src/templates/front/save-trees.php:128
+msgid "Close"
+msgstr ""
+
+#: src/templates/front/save-trees.php:136
+msgid "You can"
+msgstr "Você pode"
+
+#: src/templates/front/save-trees.php:138
+msgid "read more"
+msgstr "ler mais"
+
+#: src/templates/front/save-trees.php:139
+msgid "about the projects supported by"
+msgstr "sobre os projetos apoiados por"
+
+#: src/templates/header.php:13 src/templates/start.php:74
+msgid "Dashboard"
+msgstr ""
+
+#: src/templates/header.php:16 src/templates/settings.php:18
+#: src/templates/start.php:42
+msgid "Settings"
+msgstr ""
+
+#: src/templates/header.php:22
+msgid "Account"
+msgstr ""
+
+#: src/templates/header.php:25
+msgid "My green journey"
+msgstr ""
+
+#: src/templates/header.php:28 src/templates/start.php:16
+msgid "Getting started"
+msgstr ""
+
+#: src/templates/header.php:34
+msgid ""
+"You must verify your email address to enable the Sustainable eCommerce cart."
+msgstr ""
+
+#: src/templates/header.php:43
+msgid "Re-send verification email"
+msgstr ""
+
+#: src/templates/journey.php:16 src/templates/start.php:66
+msgid "My Green Journey"
+msgstr ""
+
+#: src/templates/journey.php:17
+msgid ""
+"We know you're busy, so we made these tools to simplify your climate "
+"journey. Show the world that you are a climate-friendly brand."
+msgstr ""
+
+#: src/templates/journey.php:23
+msgid "Sustainable ecommerce badge"
+msgstr ""
+
+#: src/templates/journey.php:24
+msgid ""
+"Easily share with your website visitors that you are a climate-friendly shop."
+msgstr ""
+
+#: src/templates/journey.php:28 src/templates/journey.php:34
+#: src/templates/journey.php:52
+msgid "Download"
+msgstr ""
+
+#: src/templates/journey.php:29 src/templates/journey.php:35
+msgid "or use WordPress code:"
+msgstr ""
+
+#: src/templates/journey.php:44
+msgid "Sustainability calendar"
+msgstr ""
+
+#: src/templates/journey.php:45
+msgid ""
+"Engage with the growing market of climate-conscious customers. Keep track of "
+"sustainability and climate events with our handy yearly calendar."
+msgstr ""
+
+#: src/templates/journey.php:58
+msgid "Content ideas about sustainability"
+msgstr ""
+
+#: src/templates/journey.php:59
+msgid ""
+"Get inspired by this collection of ideas for social media and blog posts "
+"about climate and sustainability."
+msgstr ""
+
+#: src/templates/journey.php:66
+msgid "Show me"
+msgstr ""
+
+#: src/templates/journey.php:72
+msgid "Premium Features"
+msgstr ""
+
+#: src/templates/journey.php:73
+msgid ""
+"We can assist you with custom solutions to support your brand. Here are some "
+"of our premium services: make all your shipping climate neutral, real-time "
+"climate impact calculator, and custom sustainability statement. Contact us "
+"for more information."
+msgstr ""
+
+#: src/templates/journey.php:80
+msgid "Contact Us"
+msgstr ""
+
+#: src/templates/main.php:30
+msgid "lbs."
+msgstr ""
+
+#: src/templates/main.php:30
+msgid "Kg"
+msgstr ""
+
+#: src/templates/main.php:31
+msgid "gallons"
+msgstr ""
+
+#: src/templates/main.php:31
+msgid "liters"
+msgstr ""
+
+#: src/templates/main.php:42
+msgid "Thanks for being a true climate hero"
+msgstr ""
+
+#: src/templates/main.php:47
+msgid "Carbon Offset Contribution"
+msgstr ""
+
+#: src/templates/main.php:50
+msgid "Monthly"
+msgstr ""
+
+#: src/templates/main.php:56
+msgid "Total"
+msgstr ""
+
+#: src/templates/main.php:62
+msgid "Climate Friendly Orders"
+msgstr ""
+
+#: src/templates/main.php:63
+msgid "Carbon Dioxide Reduced"
+msgstr ""
+
+#: src/templates/main.php:64
+#, php-format
+msgid "% of carbon neutral orders"
+msgstr ""
+
+#: src/templates/main.php:74
+msgid "Since you joined, you and your customers have funded"
+msgstr ""
+
+#: src/templates/main.php:77
+msgid "of carbon reduction. That’s like:"
+msgstr ""
+
+#: src/templates/main.php:83
+msgid "spruce"
+msgstr ""
+
+#: src/templates/main.php:85
+msgid "trees absorbing CO2 for a year"
+msgstr ""
+
+#: src/templates/main.php:89
+msgid "car"
+msgstr ""
+
+#: src/templates/main.php:91
+msgid " of fuel consumption"
+msgstr ""
+
+#: src/templates/main.php:95
+msgid "plane"
+msgstr ""
+
+#: src/templates/main.php:97
+msgid "hours of flight"
+msgstr ""
+
+#: src/templates/main.php:106
+msgid "Units:"
+msgstr ""
+
+#: src/templates/main.php:107
+msgid "Imperial"
+msgstr ""
+
+#: src/templates/main.php:112
+msgid "Metric"
+msgstr ""
+
+#: src/templates/main.php:117
+msgid "Widget Enabled"
+msgstr ""
+
+#: src/templates/main.php:118
+msgid "Carbon offset product exist"
+msgstr ""
+
+#: src/templates/main.php:119
+msgid "Version is up to date"
+msgstr ""
+
+#: src/templates/main.php:120
+msgid "Email verified"
+msgstr ""
+
+#: src/templates/register-form.php:23 src/templates/welcome.php:10
+msgid "Developed by"
+msgstr ""
+
+#: src/templates/register-form.php:28
+msgid "Thanks for installing the Sustainable eCommerce Cart"
+msgstr ""
+
+#: src/templates/register-form.php:33
+msgid "Your"
+msgstr ""
+
+#: src/templates/register-form.php:34
+msgid "free"
+msgstr ""
+
+#: src/templates/register-form.php:35
+msgid "all-in-one sustainable shopping experience for eCommerce:"
+msgstr ""
+
+#: src/templates/register-form.php:43
+msgid "Carbon Offset Widget"
+msgstr ""
+
+#: src/templates/register-form.php:44
+msgid "Allow your customers to reduce the carbon footprint of their order"
+msgstr ""
+
+#: src/templates/register-form.php:50
+msgid "Sustainable eCommerce Badge"
+msgstr ""
+
+#: src/templates/register-form.php:51
+msgid ""
+"Show your customers that your shop is more sustainable than your competitors"
+msgstr ""
+
+#: src/templates/register-form.php:57
+msgid "Sustainability Toolbox"
+msgstr ""
+
+#: src/templates/register-form.php:58
+msgid ""
+"Benefit from a collection of social media posts ideas, sustainability events "
+"calendar, and other tools to support your brand"
+msgstr ""
+
+#: src/templates/register-form.php:68
+msgid "Create your account"
+msgstr ""
+
+#: src/templates/register-form.php:70
+msgid "*First name"
+msgstr ""
+
+#: src/templates/register-form.php:71
+msgid "*Last name"
+msgstr ""
+
+#: src/templates/register-form.php:72
+msgid "*Email"
+msgstr ""
+
+#: src/templates/register-form.php:87
+msgid "I have read and agree to netzeroSM"
+msgstr ""
+
+#: src/templates/register-form.php:89
+msgid "Terms of Service"
+msgstr ""
+
+#: src/templates/register-form.php:91
+msgid "Privacy Policy"
+msgstr ""
+
+#: src/templates/register-form.php:105
+msgid "Submit"
+msgstr ""
+
+#: src/templates/settings.php:27
+msgid "Enable widget"
+msgstr ""
+
+#: src/templates/settings.php:31
+msgid ""
+"You can disable the widget without deactivating the plugin. Useful for "
+"troubleshooting and support issues."
+msgstr ""
+
+#: src/templates/settings.php:55
+msgid "You must verify your email address to enable the widget."
+msgstr ""
+
+#: src/templates/settings.php:69
+msgid "Widget location"
+msgstr ""
+
+#: src/templates/settings.php:77
+msgid ""
+"Choose where the widget will appear. We recommend enabling all the options "
+"for a bigger impact."
+msgstr ""
+
+#: src/templates/settings.php:87 src/templates/start.php:50
+msgid "Cart page"
+msgstr ""
+
+#: src/templates/settings.php:106
+msgid "Mini Cart"
+msgstr ""
+
+#: src/templates/settings.php:125
+msgid "Checkout"
+msgstr ""
+
+#: src/templates/site-suspended.php:24
+msgid "Hello"
+msgstr ""
+
+#: src/templates/site-suspended.php:25
+msgid "This account has been suspended due to violating our Terms of Service."
+msgstr ""
+
+#: src/templates/site-suspended.php:26
+msgid "Please get in touch with our support team to unlock your account."
+msgstr ""
+
+#: src/templates/site-suspended.php:27
+msgid "We are sorry for the inconvenience."
+msgstr ""
+
+#: src/templates/site-suspended.php:28
+msgid "Thanks,"
+msgstr ""
+
+#: src/templates/site-suspended.php:29
+msgid "The netzeroSM team"
+msgstr ""
+
+#: src/templates/start.php:17
+msgid ""
+"We created a short checklist to help you set up and get the most from the "
+"Sustainable eCommerce Cart. You can always come back to this page by "
+"clicking the link at the top."
+msgstr ""
+
+#: src/templates/start.php:24
+msgid "Confirm your email address"
+msgstr ""
+
+#: src/templates/start.php:25
+msgid "Open your inbox and confirm your email address by clicking the link."
+msgstr ""
+
+#: src/templates/start.php:31
+msgid "Customise the widget design"
+msgstr ""
+
+#: src/templates/start.php:32
+msgid ""
+"Enter the design tab and choose your favorite widget style. You can change "
+"it any time."
+msgstr ""
+
+#: src/templates/start.php:39
+msgid "Enable the widget"
+msgstr ""
+
+#: src/templates/start.php:40
+msgid "Go into the settings tab and check that the widget is enabled."
+msgstr ""
+
+#: src/templates/start.php:47
+msgid "Check the cart page"
+msgstr ""
+
+#: src/templates/start.php:48
+msgid ""
+"Check the widget exist and that everything works and looks good in the cart."
+msgstr ""
+
+#: src/templates/start.php:55
+msgid "Check the checkout page"
+msgstr ""
+
+#: src/templates/start.php:56
+msgid ""
+"Check the widget exist and that everything works and looks good in the "
+"checkout page."
+msgstr ""
+
+#: src/templates/start.php:58
+msgid "Checkout page"
+msgstr ""
+
+#: src/templates/start.php:63
+msgid "Explore your benefits"
+msgstr ""
+
+#: src/templates/start.php:64
+msgid ""
+"Get into the My Green Journey tab and start communicate your positive "
+"branding."
+msgstr ""
+
+#: src/templates/start.php:71
+msgid "Explore the dashboard"
+msgstr ""
+
+#: src/templates/start.php:72
+msgid ""
+"On the dashboard you can easily track your positive impact. It will be your "
+"default page from now on."
+msgstr ""
+
+#: src/templates/welcome.php:15
+msgid "How it works"
+msgstr ""
+
+#: src/templates/welcome.php:20
+msgid "Our plugin is"
+msgstr ""
+
+#: src/templates/welcome.php:21
+msgid "100% FREE"
+msgstr ""
+
+#: src/templates/welcome.php:22
+msgid "for you!"
+msgstr ""
+
+#: src/templates/welcome.php:26
+msgid ""
+"You recive the carbon offset payments from your customers as if it was "
+"another product sold by you."
+msgstr ""
+
+#: src/templates/welcome.php:27
+msgid ""
+"At the end of each month, we collect the exact same amount from you, and use "
+"it to fund certified carbon offset projects."
+msgstr ""
+
+#: src/templates/welcome.php:30
+msgid "Together we will:"
+msgstr ""
+
+#: src/templates/welcome.php:32
+msgid "Prevent deforestation"
+msgstr ""
+
+#: src/templates/welcome.php:34
+msgid "Accelerate the global transition toward clean energy."
+msgstr ""
+
+#: src/templates/welcome.php:44
+msgid "1. Customers choose to buy carbon offset"
+msgstr ""
+
+#: src/templates/welcome.php:50
+msgid "2. You collect carbon offset contribution just like any other product"
+msgstr ""
+
+#: src/templates/welcome.php:56
+msgid ""
+"3. Once a month, your contribution funds carbon offset projects via "
+"netzeroSM."
+msgstr ""
+
+#: src/templates/welcome.php:62
+msgid "Let's start"
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:4
+msgid "The plugin is not functioning."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:8
+msgid "Design and customization issues."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:12
+msgid "The plugin creates technical issues on my website."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:16
+msgid "Your support team didn't help me / didn't respond to me."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:20
+msgid "I found a better alternative."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:24
+msgid "Temporary deactivation. I'll reactivate it soon."
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:28
+msgid "Other"
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:36
+msgid "Deactivating the Sustainable eCommerce Cart - Survey"
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:40
+msgid ""
+"We would appreciate it if you could take a moment for this one-question "
+"survey and let us know why you are deactivating the plugin. \n"
+"\t\t\t\tThis is an optional survey, but your feedback means a lot to us. You "
+"can choose multiple answers:"
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:57
+msgid "Stay Active"
+msgstr ""
+
+#: src/templates/wp-admin/deactivation-prompt.php:58
+msgid "Submit & Deactivate"
+msgstr ""

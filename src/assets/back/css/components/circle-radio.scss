@@ -1,0 +1,69 @@
+.rgbc-circle-radio {
+	position: relative;
+	&__input {
+		width: 0 !important;
+		height: 0 !important;
+		position: absolute;
+		visibility: hidden;
+		&:checked {
+			& + label {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+	}
+	&__label {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			position: absolute;
+			@include calc(top, -8px);
+			@include calc(bottom, -8px);
+			@include calc(left, -8px);
+			@include calc(right, -8px);
+			border-radius: 50%;
+			border: 3px solid $green;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+	}
+	&__inner {
+		@include calc(width, 30px);
+		@include calc(height, 30px);
+		border-radius: 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		border: 1px solid rgba(11, 32, 39, 0.3);
+		overflow: hidden;
+		&_white {
+			background-color: #FFF;
+		}
+		&_black {
+			background-color: #122027;
+		}
+		&_green {
+			background-color: #449267;
+		}
+		&_gray {
+			background-color: #32474A;
+		}
+	}
+	&_country &__inner {
+		border: none;
+	}
+	&__title {
+		top: calc(100% + 1.4em);
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		text-align: center;
+		position: absolute;
+		font-family: $gilroy-semi;
+		@include calc(font-size, 10px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		color: rgba($font-black, 0.5);
+	}
+}

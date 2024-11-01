@@ -1,0 +1,54 @@
+.rgbc-start {
+	@include calc(padding-top, 10px);
+	@include calc(padding-bottom, 10px);
+	&__item {
+		@include calc(padding-top, 15px);
+		@include calc(padding-bottom, 15px);
+		@include calc(padding-left, 96px);
+		@include calc(padding-right, 123px);
+		display: flex;
+		&:nth-child(odd) {
+			background: $light-gray;
+		}
+	}
+	&__num,
+	&__title {
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&__description {
+		@include calc(font-size, 16px);
+		margin-top: 0.3125em !important;
+		line-height: 150%;
+		color: rgba($font-black, 0.65);
+	}
+	&__num-container {
+		flex: 0 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include calc(width, 157px);
+	}
+	&__title-container {
+		flex: 0 0 auto;
+		@include calc(width, 660px);
+	}
+	&__link-container {
+		flex: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__link {
+		font-weight: 500;
+		@include calc(font-size, 16px);
+		line-height: 150%;
+		text-decoration: underline !important;
+		color: $dark-green;
+		&:hover, &:active, &:focus {
+			color: $dark-green;
+		}
+	}
+}

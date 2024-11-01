@@ -1,0 +1,76 @@
+.rgbc-header {
+	position: relative;
+	@include calc(min-height, 116px);
+	@include calc(padding-top, 50px);
+	@include calc(padding-bottom, 25px);
+	@include calc(padding-left, 50px);
+	@include calc(padding-right, 50px);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__nav-list {
+		display: flex;
+	}
+	&__nav-item {
+		&:not(:last-child) {
+			@include calc(margin-right, 40px);
+		}
+		&_active .rgbc-header__nav-link {
+			opacity: 1;
+			&::before {
+				opacity: 1;
+			}
+		}
+		&:hover .rgbc-header__nav-link {
+			opacity: 1;
+		}
+	}
+	&__nav-link {
+		position: relative;
+		font-family: $gilroy-semi;
+		@include calc(font-size, 12px);
+		@include calc(padding-top, 15px);
+		@include calc(padding-bottom, 15px);
+		line-height: 100%;
+		letter-spacing: 0.2em;
+		color: $font-black;
+		opacity: 0.5;
+		text-transform: uppercase;
+		transition: opacity 0.3s;
+		&::before {
+			content: '';
+			position: absolute;
+			height: 3px;
+			@include calc(width, 40px);
+			top: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			background: $green;
+			opacity: 0;
+			transition: inherit;
+		}
+	}
+
+	&__error {
+		position: absolute;
+		right: 14em;
+		bottom: 2.2em;
+
+		@media screen and (max-width: $desktop-mid) {
+			right: 7.5em;
+		}
+	}
+
+	&__logo-image {
+		@include calc(width, 44px);
+	}
+
+	&__resend-email {
+		right: 3em;
+		position: absolute;
+		bottom: -2em;
+		z-index: 2;
+	}
+}

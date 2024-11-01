@@ -1,0 +1,119 @@
+.rgbc-widget-checkbox {
+	display: block;
+	margin-bottom: 0 !important;
+	font-size: 1em;
+	&__line {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		@include calc(width, 63px);
+		@include calc(height, 29px);
+		background: $gray;
+		box-shadow: inset 0 0 0.63em rgba($black, 0.15);
+		@include calc(border-radius, 59.434px);
+		@include calc(padding-right, 7px);
+		transition: background 0.3s;
+
+		&::before {
+			content: 'Add';
+			font-family: $arial;
+			@include calc(font-size, 14px);
+			line-height: normal;
+			color: rgba($font-black, 0.5);
+			transition: opacity 0.3s;
+		}
+	}
+	.rgbc-widget_mini &__line {
+		width: 6.3em;
+		height: 2.9em;
+
+		&::before {
+			font-size: 1.4em;
+			margin-right: 0.3em;
+		}
+	}
+
+	&__input {
+		width: 0 !important;
+		height: 0 !important;
+		margin: 0;
+		position: absolute !important;
+		visibility: hidden;
+		&:checked {
+			& + {
+				.rgbc-widget-checkbox__line {
+					background: $green;
+					&::before {
+						opacity: 0;
+					}
+					.rgbc-widget-checkbox__handle {
+						background: $font-white;
+						left: 2.25em;
+
+						&::before {
+							opacity: 0;
+						}
+						&::after {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__handle {
+		@include calc(width, 24px);
+		@include calc(height, 24px);
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		@include calc(left, 3px);
+		margin: auto 0;
+		background: $green;
+		transition: background 0.3s, left 0.3s;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 70%;
+			height: 70%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(/src/assets/images/plus2.svg);
+			transition: opacity 0.3s;
+		}
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 70%;
+			height: 70%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(/src/assets/images/check.svg);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+	}
+	.rgbc-widget_mini &__handle {
+		width: 2.4em;
+		height: 2.4em;
+		left: 0.24em;
+	}
+	.rgbc-widget_mini &__input:checked + &__line &__handle {
+		left: 3.55em;
+	}
+}
+

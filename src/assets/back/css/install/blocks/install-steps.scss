@@ -1,0 +1,7 @@
+.rgbc-install-steps {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	@include calc(column-gap, 129px);
+	@include calc(row-gap, 40px);
+	justify-items: center;
+}

@@ -1,0 +1,9 @@
+.rgbc-widget-container.rtl {
+  .rgbc-widget-checkbox {
+    &__line {
+      &::before {
+        content: '';
+      }
+    }
+  }
+}

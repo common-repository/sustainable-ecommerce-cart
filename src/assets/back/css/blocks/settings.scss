@@ -1,0 +1,55 @@
+.rgbc-settings {
+	@include calc(margin-top, 44px);
+	@include calc(padding-bottom, 44px);
+	&__block {
+		@include calc(padding-bottom, 25px);
+		@include calc(padding-top, 25px);
+		@include calc(padding-left, 63px);
+		@include calc(padding-right, 298px);
+		&:nth-child(odd) {
+			background: $light-gray;
+		}
+	}
+	&__inner {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__left-side {
+		@include calc(max-width, 531px);
+	}
+	&__title, h2 {
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		margin-bottom: 0.25em;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&__description, p {
+		@include calc(font-size, 16px);
+		line-height: 150%;
+		color: rgba($font-black, 0.75);
+	}
+	&__right-side {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__checkbox-item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			@include calc(margin-bottom, 20px);
+		}
+	}
+	&__checkbox-title {
+		@include calc(font-size, 16px);
+		margin-right: 2em;
+		line-height: 150%;
+	}
+	&__error {
+		position: relative;
+		@include calc(margin-top, 15px);
+	}
+}

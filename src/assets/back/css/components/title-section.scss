@@ -1,0 +1,119 @@
+.rgbc-title-section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&_image {
+		@include calc(height, 150px);
+		background-image: url(/src/assets/images/title-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	&__title {
+		color: $font-white;
+	}
+	&__description {
+		@include calc(font-size, 16px);
+		max-width: 62.5em;
+		margin-top: 0.5em !important;
+		line-height: 150%;
+		text-align: center;
+		color: rgba($font-white, 0.75);
+	}
+	&_image &__title {
+		font-family: $gilroy-black;
+		@include calc(font-size, 50px);
+		line-height: 100%;
+		letter-spacing: -0.03em;
+	}
+	&_main {
+		@include calc(height, 190px);
+		background: $font-black;
+	}
+	&_main &__title {
+		font-family: $gilroy;
+		@include calc(font-size, 30px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&_fit {
+		@include calc(padding-top, 49px);
+		@include calc(padding-bottom, 49px);
+		background: $font-black;
+		color: $font-white;
+		flex-direction: column;
+	}
+	&_fit &__title {
+		font-family: $gilroy;
+		@include calc(font-size, 30px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&_note {
+		@include calc(padding-bottom, 10px);
+	}
+	&_journey &__description {
+		max-width: 33em;
+	}
+
+	&__table-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include calc(width, 1266px);
+		@include calc(margin-top, 34px);
+		@include calc(padding-top, 36px);
+		@include calc(padding-bottom, 6px);
+
+		&::before {
+			content: '';
+			@include calc(width, 1266px);
+			max-width: 66vw;
+			height: 2px;
+			background: rgba($font-white, 0.3);
+			position: absolute;
+			top: 0;
+			margin: 0 auto;
+		}
+	}
+	&__table-title {
+		color: $font-white;
+		font-family: $gilroy;
+		@include calc(font-size, 20px);
+		line-height: 120%;
+		letter-spacing: -0.03em;
+	}
+	&__table {
+		display: flex;
+		@include calc(margin-left, 11px);
+		@include calc(margin-right, 11px);
+	}
+	&__table-item {
+		@include calc(width, 175px);
+		text-align: center;
+		&:not(:last-child) {
+			border-right: 1px solid $font-white;
+		}
+	}
+	&__table-item-value {
+		color: $green;
+		font-family: $gilroy-semi;
+		@include calc(font-size, 40px);
+		line-height: 100%;
+		letter-spacing: -0.03em;
+		margin-bottom: 0.1em !important;
+	}
+	&__table-item-title {
+		@include calc(font-size, 12px);
+		line-height: 130%;
+	}
+	&__note {
+		@include calc(font-size, 16px);
+		max-width: 62.5em;
+		margin-top: 0.8em !important;
+		line-height: 150%;
+		text-align: center;
+		color: rgba($font-white, 0.75);
+	}
+}

@@ -1,0 +1,15 @@
+@mixin absolute-fill {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+@mixin calc( $key, $val, $unit: em, $important: false ) {
+	@if $important {
+		#{$key}: calc(1 / $base-font-size * $val) + $unit !important;
+	} @else {
+		#{$key}: calc(1 / $base-font-size * $val) + $unit;
+	}
+}

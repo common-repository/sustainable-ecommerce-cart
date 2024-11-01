@@ -1,0 +1,11 @@
+.rgbc-button {
+	padding: 1.07em 1.7em !important;
+	background: $green !important;
+	color: $font-black !important;
+	font-family: $gilroy-semi;
+	@include calc(font-size, 14px);
+	letter-spacing: 0.1em;
+	line-height: normal !important;
+	text-transform: uppercase;
+	border-radius: 3.75em;
+}

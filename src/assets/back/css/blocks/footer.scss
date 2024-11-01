@@ -1,0 +1,41 @@
+.rgbc-footer {
+	width: 100%;
+	height: 3.5em;
+	padding-left: 3.57em;
+	padding-right: 3.57em;
+	background: $font-black;
+	color: $font-white;
+	display: flex;
+	align-items: center;
+	@include calc(font-size, 14px);
+	line-height: 150%;
+	&__title {
+		color: $green;
+	}
+	&__faq-link {
+		color: $font-white;
+		text-decoration: underline;
+	}
+	&__email,
+	&__phone {
+		margin-left: 2.14em;
+	}
+	&__email-link,
+	&__phone-link {
+		font-size: 0.86em;
+	}
+	&__item-title {
+		font-family: $gilroy;
+		line-height: 120%;
+		letter-spacing: -0.03em;
+		opacity: 0.7;
+		margin-right: 0.72em;
+	}
+	&__email-link {
+		color: $orange;
+		text-decoration: underline;
+	}
+	&__phone-link {
+		color: $font-white;
+	}
+}

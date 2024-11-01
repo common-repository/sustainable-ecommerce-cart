@@ -1,0 +1,111 @@
+.rgbc-install-form {
+	width: max-content;
+	&__title {
+		font-family: $gilroy-semi;
+		@include calc(font-size, 45px);
+		margin-bottom: 1.15em !important;
+		line-height: 100%;
+		letter-spacing: -0.03em;
+		color: $green;
+	}
+	&__form {
+		@include calc(width, 330px);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	&__input {
+		width: 100%;
+		@include calc(height, 48px);
+		@include calc(margin-bottom, 13px, em, true);
+		background: transparent !important;
+		border-bottom: 1px solid rgba($font-white, 0.7) !important;
+		font-family: $roboto;
+		color: rgba($font-white, 0.7) !important;
+		@include calc(font-size, 16px);
+		padding: 0 1em !important;
+		min-height: auto !important;
+		line-height: normal !important;
+		&:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0 1000px $font-black inset !important;
+			-webkit-text-fill-color: rgba($font-white, 0.7) !important;
+		}
+		&::placeholder {
+			opacity: 1;
+			color: rgba($font-white, 0.7);
+		}
+	}
+	&__terms-label {
+		display: flex;
+		align-items: baseline;
+		@include calc(margin-top, 11px);
+	}
+	&__checkbox {
+		position: relative;
+		flex: 0 0 auto;
+		appearance: none !important;
+		min-width: auto !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+		background: transparent !important;
+		@include calc(margin-right, 9px, em, true);
+		width: 0.8em !important;
+		height: 0.8em !important;
+		border: 1px solid $font-white !important;
+		&::before {
+			content: none !important;
+		}
+		&:checked {
+			border-color: $green !important;
+			background-color: $green !important;
+			background-size: 0.98em 0.65em !important;
+			background-repeat: no-repeat !important;
+			background-image: url(/src/assets/images/nav-check-white.svg) !important;
+			background-position: center center !important;
+		}
+	}
+	&__terms-title {
+		@include calc(font-size, 13px);
+		line-height: 150%;
+		color: rgba($font-white, 0.75);
+	}
+	&__terms-link {
+		color: rgba($green, 0.75);
+		text-decoration: underline !important;
+	}
+	&__auth-error {
+		display: flex;
+		border: 1px solid $error;
+		@include calc(border-radius, 5px);
+		@include calc(padding-top, 7px);
+		@include calc(padding-right, 9px);
+		@include calc(padding-bottom, 7px);
+		@include calc(padding-left, 10px);
+		@include calc(margin-top, 30px);
+		@include calc(margin-bottom, -29px);
+		&::before {
+			content: '';
+			flex: 0 0 auto;
+			@include calc(width, 15px);
+			@include calc(height, 15px);
+			@include calc(margin-right, 15px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url(/src/assets/images/error.svg);
+		}
+	}
+	&__auth-error-message {
+		@include calc(font-size, 13px);
+		line-height: 150%;
+		color: $error;
+	}
+	&__button {
+		@include calc(margin-top, 58px);
+		display: flex;
+		justify-content: center;
+		&_design {
+			@include calc(margin-top, 20px);
+			@include calc(margin-bottom, 58px);
+		}
+	}
+}

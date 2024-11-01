@@ -1,0 +1,68 @@
+.rgbc-install-step {
+	position: relative;
+	text-align: center;
+	&::before, &::after {
+		content: '';
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		@include calc(width, 65px);
+		height: 3.3em;
+	}
+	&__icon {
+		@include calc(width, 120px);
+		@include calc(height, 120px);
+		@include calc(border-top-left-radius, 50px);
+		@include calc(border-bottom-right-radius, 50px);
+		background: $font-black no-repeat center center;
+		margin: 0 auto;
+	}
+	&__text-container {
+		@include calc(margin-top, 18px);
+	}
+	&__paragraph {
+		@include calc(font-size, 16px);
+		line-height: 150%;
+	}
+	&_first {
+		order: 1;
+		@include calc(width, 214px);
+		grid-column-start: 1;
+		grid-column-end: 3;
+		&::before {
+			background-image: url(/src/assets/images/step-arrow-3.svg);
+			right: 16em;
+			bottom: 1.5em;
+		}
+		&::after {
+			background-image: url(/src/assets/images/step-arrow-1.svg);
+			left: 16em;
+			bottom: 1.5em;
+		}
+	}
+	&_first &__icon {
+		background-size: 2.94em 3.07em;
+		background-image: url(/src/assets/images/step-1.svg);
+	}
+	&_second {
+		order: 3;
+		@include calc(width, 280px);
+	}
+	&_second &__icon {
+		background-size: 3.25em 3.75em;
+		background-image: url(/src/assets/images/step-2.svg);
+	}
+	&_third {
+		order: 2;
+		@include calc(width, 300px);
+		&::before {
+			background-image: url(/src/assets/images/step-arrow-2.svg);
+			left: 19.7em;
+			bottom: 3.9em;
+		}
+	}
+	&_third &__icon {
+		background-size: 4.31em 4.06em;
+		background-image: url(/src/assets/images/step-3.svg);
+	}
+}
